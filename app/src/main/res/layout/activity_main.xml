@@ -11,61 +11,61 @@
         android:id="@+id/group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Группа" />
+        android:text="Группа"
+        android:paddingTop="8dp"
+        android:paddingLeft="8dp"/>
 
     <TextView
+        android:textSize="24dp"
         android:id="@+id/groupSelect"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:text="ИКБО-13-20"/>
 
     <TextView
         android:id="@+id/date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:padding="8dp"/>
 
     <TextView
         android:id="@+id/pair"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Разработка мобильных приложений"
-        android:textAlignment="center" />
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="599dp">
-
-    </FrameLayout>
+        android:textAlignment="center"
+        android:paddingBottom="8dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center">
 
         <Button
             android:id="@+id/switch_page"
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:backgroundTint="#000000"
-            android:backgroundTintMode="add"
-            android:fontFamily="serif-monospace"
-            android:includeFontPadding="false"
-            android:text="Успеваемость"
-            android:textColor="#000000" />
+            android:text="Успеваемость" />
 
         <Button
             android:id="@+id/confirm"
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:fontFamily="sans-serif"
-            android:text="Подтвердить"
-            android:textColor="#000000"
-            android:textColorHint="#000000" />
+            android:text="Подтвердить" />
     </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        >
+    </FrameLayout>
+
+
 </LinearLayout>
