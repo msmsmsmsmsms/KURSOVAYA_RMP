@@ -60,12 +60,13 @@
             android:text="Подтвердить" />
     </LinearLayout>
 
-    <FrameLayout
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="8dp"
+        android:id="@+id/recyclerView"
         >
-    </FrameLayout>
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </LinearLayout>
