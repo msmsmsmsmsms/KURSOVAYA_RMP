@@ -7,31 +7,38 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/group"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Группа"
-        android:paddingTop="8dp"
-        android:paddingLeft="8dp"/>
+        android:orientation="horizontal">
 
-    <TextView
-        android:textSize="24dp"
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Группа"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"/>
+        <TextView
+            android:id="@+id/group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:textSize="20dp"
         android:id="@+id/groupSelect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="8dp"
         android:paddingLeft="8dp"
-        android:text="ИКБО-13-20"/>
-
-<!--        <EditText-->
-<!--            android:textSize="24dp"-->
-<!--            android:id="@+id/groupSelect"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:paddingBottom="8dp"-->
-<!--            android:paddingLeft="8dp"-->
-<!--            android:text="ИКБО-13-20"/>-->
+        android:text="Выбрать группу"
+        android:onClick="groupSelect"
+        />
 
     <TextView
         android:id="@+id/date"
@@ -48,27 +55,28 @@
         android:textAlignment="center"
         android:paddingBottom="8dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:textAlignment="center">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:textAlignment="center">-->
 
-        <Button
-            android:id="@+id/switch_page"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Успеваемость" />
+<!--        <Button-->
+<!--            android:id="@+id/switch_page"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Успеваемость"-->
+<!--            />-->
 
-        <Button
-            android:id="@+id/confirm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Подтвердить"
-            android:onClick="add"/>
-    </LinearLayout>
+<!--        <Button-->
+<!--            android:id="@+id/confirm"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Подтвердить"-->
+<!--            />-->
+<!--    </LinearLayout>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

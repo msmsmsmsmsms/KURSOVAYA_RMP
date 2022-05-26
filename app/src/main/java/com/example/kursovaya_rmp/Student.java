@@ -18,10 +18,26 @@ public class Student extends Group{
         return day_list;
     }
 
-    public void setDay() {
+    public void isHere(boolean state, String mark, String date) {
         Day today = new Day();
-        today.setDate("23.05.2022");
-        today.setMark(5);
-        day_list.add(today);
+        if (state) {
+            today.setDate(date);
+            today.setMark(mark);
+            boolean flag = false;
+            for (int i = 0; i < day_list.size(); i++) {
+                if (date.equals(day_list.get(i).getDate())) {
+                    flag = true;
+                }
+            }
+            if (!flag) {
+                day_list.add(today);
+            }
+        }
+        else {
+            today.setDate("Absent");
+            today.setMark(mark);
+            day_list.add(today);
+        }
     }
+
 }

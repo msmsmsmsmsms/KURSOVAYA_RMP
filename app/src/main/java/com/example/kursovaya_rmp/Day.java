@@ -3,7 +3,7 @@ package com.example.kursovaya_rmp;
 
 public class Day extends Student{
     private String date;
-    private int mark;
+    private String mark;
 
     public String getDate() {
         return date;
@@ -13,11 +13,11 @@ public class Day extends Student{
         this.date = date;
     }
 
-    public int getMark() {
+    public String getMark() {
         return mark;
     }
 
-    public void setMark(int mark) {
+    public void setMark(String  mark) {
         this.mark = mark;
     }
 }

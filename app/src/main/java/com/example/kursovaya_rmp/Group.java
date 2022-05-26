@@ -1,5 +1,14 @@
 package com.example.kursovaya_rmp;
 
+
+
+import android.content.Context;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Group {
@@ -8,9 +17,6 @@ public class Group {
 
     public Group() {
         this.setGroupName("ИКБО-13-20");
-        for (int i = 0; i < student_list.size(); i++) {
-            System.out.println(student_list.get(i).getName());
-        }
     }
 
     public String getGroupName() {
