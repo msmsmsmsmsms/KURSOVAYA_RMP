@@ -9,11 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public final class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
-    private ArrayList<Student> students;
+public final class StudentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+    private ArrayList<Day> days;
 
-    public Adapter(ArrayList<Student> students) {
-        this.students = students;
+    public StudentAdapter(){}
+    public StudentAdapter(ArrayList<Day> days) {
+        this.days = days;
     }
 
     @NonNull
@@ -21,18 +22,22 @@ public final class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new RecyclerView.ViewHolder(
                 LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.list_item, parent, false)
+                        .inflate(R.layout.student_item, parent, false)
         ) {};
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        TextView name = holder.itemView.findViewById(R.id.textView_name);
-        name.setText(this.students.get(position).getName());
+        if(!days.isEmpty()) {
+            TextView date = holder.itemView.findViewById(R.id.student_date);
+            date.setText(this.days.get(position).getDate());
+            TextView mark = holder.itemView.findViewById(R.id.student_mark);
+            mark.setText(this.days.get(position).getMark());
+        }
     }
 
     @Override
     public int getItemCount() {
-        return this.students.size();
+        return this.days.size();
     }
 }

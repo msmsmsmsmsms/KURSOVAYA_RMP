@@ -30,6 +30,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
     private ArrayList<Group> groups = new ArrayList<>();
     private RecyclerView.Adapter mAdapter;
+    private RecyclerView.Adapter studentAdapter;
     private String currentGroup;
 
     @Override
@@ -111,11 +112,29 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     }
 
     public void openStudent(View view) {
+        Group group = null;
+        Student student = null;
         TextView textView = (TextView) view;
         String text = textView.getText().toString();
         setContentView(R.layout.student_overlay);
         TextView student_name = findViewById(R.id.student_name);
         student_name.setText(text);
+
+
+        for (int i = 0; i < groups.size(); i++) if (currentGroup
+                .equals(groups.get(i).getGroupName())) group = groups.get(i);
+
+        for (int i = 0; i < group.getStudent_list().size(); i++)
+            if (text.equals(group.getStudent_list().get(i).getName())) {
+                student = group.getStudent_list().get(i);
+            }
+
+
+        studentAdapter = new StudentAdapter(student.getDay_list());
+        RecyclerView recyclerView = findViewById(R.id.student_recycler_view);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(studentAdapter);
     }
 
     public void back(View view) {
@@ -151,7 +170,12 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 student = group.getStudent_list().get(i);
 
         student.isHere(isHere, mark, setDate());
-        back(view);
+
+        studentAdapter = new StudentAdapter(student.getDay_list());
+        RecyclerView recyclerView = findViewById(R.id.student_recycler_view);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(studentAdapter);
     }
 
     public void changeTitle(View view) {

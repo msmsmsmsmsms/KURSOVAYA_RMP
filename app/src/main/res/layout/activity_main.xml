@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ECEEF0"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,67 +17,74 @@
             android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Группа"
+            android:paddingLeft="8dp"
             android:paddingTop="8dp"
-            android:paddingLeft="8dp"/>
+            android:text="Группа:"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
         <TextView
             android:id="@+id/group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
             android:paddingTop="8dp"
-            android:paddingLeft="8dp"/>
+            android:textColor="#212121"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
 
     <Button
-        android:textSize="20dp"
         android:id="@+id/groupSelect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="8dp"
-        android:paddingLeft="8dp"
-        android:text="Выбрать группу"
         android:onClick="groupSelect"
-        />
+        android:paddingLeft="8dp"
+        android:paddingBottom="8dp"
+        android:text="Выбрать группу"
+        android:textSize="20dp"
+        app:cornerRadius="20sp" />
 
     <TextView
         android:id="@+id/date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="8dp"
         android:textAlignment="center"
-        android:padding="8dp"/>
+        android:textColor="#212121" />
 
     <TextView
         android:id="@+id/pair"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
         android:text="Разработка мобильных приложений"
         android:textAlignment="center"
-        android:paddingBottom="8dp"/>
+        android:textColor="#212121" />
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:textAlignment="center">-->
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:textAlignment="center">-->
 
-<!--        <Button-->
-<!--            android:id="@+id/switch_page"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="Успеваемость"-->
-<!--            />-->
+    <!--        <Button-->
+    <!--            android:id="@+id/switch_page"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="Успеваемость"-->
+    <!--            />-->
 
-<!--        <Button-->
-<!--            android:id="@+id/confirm"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="Подтвердить"-->
-<!--            />-->
-<!--    </LinearLayout>-->
+    <!--        <Button-->
+    <!--            android:id="@+id/confirm"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="Подтвердить"-->
+    <!--            />-->
+    <!--    </LinearLayout>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
