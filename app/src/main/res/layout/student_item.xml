@@ -2,17 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ECEEF0"
-    android:padding="8dp">
+    android:background="#ECEEF0">
 
     <TextView
         android:id="@+id/student_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="3"
         android:text="TextView"
         android:textColor="#212121"
-        android:textSize="20sp"/>
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/student_mark"
@@ -20,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="TextView"
+        android:textAlignment="textEnd"
         android:textColor="#212121"
-        android:textSize="20sp"/>
+        android:textSize="16sp"/>
 </LinearLayout>

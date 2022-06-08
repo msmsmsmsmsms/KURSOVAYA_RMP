@@ -11,26 +11,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
 
         <TextView
             android:id="@+id/text"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:paddingTop="8dp"
+            android:layout_height="match_parent"
+
             android:text="Группа:"
             android:textColor="#212121"
+            android:textAllCaps="true"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/group"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:paddingTop="8dp"
+            android:layout_height="match_parent"
+            android:paddingStart="8dp"
             android:textColor="#212121"
-            android:textSize="16sp" />
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            tools:ignore="RtlSymmetry" />
 
     </LinearLayout>
 
@@ -39,29 +41,46 @@
         android:id="@+id/groupSelect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
         android:onClick="groupSelect"
-        android:paddingLeft="8dp"
-        android:paddingBottom="8dp"
         android:text="Выбрать группу"
-        android:textSize="20dp"
-        app:cornerRadius="20sp" />
+        android:textAllCaps="true"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="16sp"
         android:padding="8dp"
-        android:textAlignment="center"
-        android:textColor="#212121" />
+        android:background="#DCDCDC"
+        android:textAllCaps="true"
+        android:textAlignment="textStart"
+        android:textColor="#212121"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
 
     <TextView
         android:id="@+id/pair"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="8dp"
         android:text="Разработка мобильных приложений"
-        android:textAlignment="center"
-        android:textColor="#212121" />
+        android:textAlignment="textStart"
+        android:padding="8dp"
+        android:background="#DCDCDC"
+        android:textAllCaps="true"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
 
     <!--    <LinearLayout-->
     <!--        android:layout_width="match_parent"-->
@@ -90,7 +109,9 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dp"></androidx.recyclerview.widget.RecyclerView>
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
 
 
 </LinearLayout>

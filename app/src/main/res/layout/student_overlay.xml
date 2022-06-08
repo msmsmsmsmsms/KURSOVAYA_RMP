@@ -1,67 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ECEEF0"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/student_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="12dp"
-        android:text=""
-        android:textAlignment="center"
-        android:textColor="#212121"
-        android:textSize="20dp" />
-
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/student_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/Here"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:onClick="changeTitle"
+                android:text="Присутствует" />
+
+            <EditText
+                android:id="@+id/mark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="5"
+                android:background="#DCDCDC"
+                android:layout_marginLeft="8dp"
+                android:hint="Оценка"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="#212121" />
+
+        </LinearLayout>
 
         <Button
-            android:id="@+id/Here"
+            android:id="@+id/confirm_student"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="changeTitle"
-            android:text="Присутствует"
-            app:cornerRadius="20sp" />
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:onClick="confirm_student"
+            android:text="Подтвердить" />
 
-        <EditText
-            android:id="@+id/mark"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/student_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="5"
-            android:hint="Оценка"
-            android:inputType="number"
-            android:textAlignment="center"
-            android:textColor="#212121" />
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/confirm_student"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="confirm_student"
-        android:text="Подтвердить"
-        app:cornerRadius="20sp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/student_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="454dp">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
         android:onClick="back"
         android:text="Назад"
-        app:cornerRadius="20sp"></Button>
-</LinearLayout>
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
