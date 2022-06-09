@@ -34,7 +34,7 @@ public class Student extends Group{
             }
         }
         else {
-            today.setDate("Absent");
+            today.setDate(date + " - отсутствует");
             today.setMark(mark);
             day_list.add(today);
         }
